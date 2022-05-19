@@ -74,7 +74,8 @@ def crawl_pages():
                 for img in go.find_all('img')
             ]
             # minima = ['f(x_i) = 0', 'x_i = 0', 'i=1,...,n']
-            minima = alts
+            minima_latex = ' for '.join(alts)
+            minima = alts[:2]
 
             # x_i
             domain = get_domain(p)
@@ -106,6 +107,7 @@ def crawl_pages():
                 name=name,
                 latex=latex,
                 minima=minima,
+                minima_latex=minima_latex,
                 domain=domain,
                 domain_latex=domain_latex,
                 link=link,

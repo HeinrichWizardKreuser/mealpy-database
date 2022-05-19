@@ -61,7 +61,7 @@ def extract(filepath, adict):
     tags = adict['summary']['tags'].split(' ')
 
     # keep the minima as is since it should be described in detail
-    minima = adict['Global Minima'][0]
+    minima_latex = adict['Global Minima'][0]
     # if 'one' in minima or 'The global' in minima:
     #     minima = minima[minima.find('$'):]
     
@@ -84,7 +84,7 @@ def extract(filepath, adict):
         tags=tags,
         domain=domain,
         domain_latex=domain_latex,
-        minima=minima,
+        minima_latex=minima_latex,
         link=link,
         )
 

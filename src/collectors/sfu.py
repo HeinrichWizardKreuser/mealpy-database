@@ -66,7 +66,7 @@ def crawl_functions():
         index = alist.index('Input Domain:')
 
         domain = alist[index+1]
-        domain = domain[domain.find('xi'):]
+        domain_latex = domain[domain.find('x'):]
 
         # link
         href = html_path.removeprefix(FUNCTION_PATH)
@@ -76,7 +76,7 @@ def crawl_functions():
             name=name,
             dimensions=dimensions,
             references=references,
-            domain=domain,
+            domain_latex=domain_latex,
             link=link,
         ))
     df = pd.DataFrame(data)
