@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Sphere Function</title>
+   <link rel="stylesheet" href="librarystyle.css">
+</head>
+
+<body>
+<div id="main">
+
+
+<!-- Website Title -->
+<div id="webtitle"">
+<a href="index.html">
+<h1>Virtual Library of Simulation Experiments:</h1>
+<div id ="subtitle"><b>Test Functions and Datasets</b></div>
+</a>
+</div><!--webtitle-->
+
+
+<!-- Navigation Bar -->
+<div id="bar">
+<iframe src="navbar.html" id="bar"></iframe>
+</div><!--navbar-->
+
+
+<!-- Content: Title -->
+<div id="content">
+<div id="title">
+<h3><a href="optimization.html">Optimization Test Problems</a></h3>
+</div><!--title-->
+
+<!-- Content: Underline -->
+<div id="underline">
+<hr>
+</div><!--underline-->
+
+<!-- Content: Name -->
+<div id="name">
+<h2>Sphere Function</h2>
+</div><!--name-->
+
+<!-- Content: Images -->
+<div id="plot">
+<br>
+<center><img src="spheref.png" style="width: 35em;"></img></center>
+<center><img src="spheref2.png"></img></center>
+</div><!--plot-->
+
+<!-- Content: General Information -->
+<div id="info">
+<h3 style="line-height: 0.8em;">Description:</h3>
+<i>Dimensions: d</i>
+<br>
+<br>
+The Sphere function has d local minima except for the global one. It is continuous, convex and unimodal. The plot shows its two-dimensional form.
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Input Domain:</h3>
+The function is usually evaluated on the hypercube x<sub>i</sub> &isin; [-5.12, 5.12], for all i = 1, &hellip;, d.
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Global Minimum:</h3>
+<img src="spheref3.png", style="height: 1.5em;"></img>
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Modifications and Alternate Forms:</h3>
+Picheny et al. (2012) use the following, slightly different, version of the Sphere function, with d = 6, on [0, 1]<sup>6</sup>:
+<center><img src="sphere6d2.png"></img></center>
+<br>
+This function has a mean of zero and a variance of one. The authors also add a small Gaussian error term to the output.
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Code:</h3>
+<div id="codes">
+<a href="Code/spherefm.html">MATLAB Implementation</a><br>
+<a href="Code/spherefr.html">R Implementation</a><br>
+<a href="Code/spherefmodm.html">MATLAB Implementation, Modified</a><br>
+<a href="Code/spherefmodr.html">R Implementation, Modified</a>
+</div><!--codes-->
+<br>
+<h3 style="line-height: 0.8em;">References:</h3>
+<p>Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. <i>Towards global optimization, 2</i>, 1-15.</p>
+<p>Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.</p><p>Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.</p>
+<hr>
+<br>
+For questions or comments, please email Derek Bingham at: dbingham@stat.sfu.ca.
+<br>
+<br>
+<br>
+</div><!--info-->
+
+<!-- Content: Line -->
+<div id="line">
+</div><!--line-->
+<br>
+
+<!-- Content: Footer -->
+<div class="update">
+<span>LastUpdated</span>
+</div><!--update-->
+<div class="authors">
+<span>Authors</span>
+</div><!--authors-->
+<div class="copy">
+<span>Copy</span>
+</div><!--copy-->
+
+
+</div><!--content-->
+</div><!--main-->
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9105246; 
+var sc_invisible=1; 
+var sc_security="5a7599c2"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9105246/0/5a7599c2/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>

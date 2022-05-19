@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Forrester et al. (2008) Function</title>
+   <link rel="stylesheet" href="librarystyle.css">
+</head>
+
+<body>
+<div id="main">
+
+
+<!-- Website Title -->
+<div id="webtitle"">
+<a href="index.html">
+<h1>Virtual Library of Simulation Experiments:</h1>
+<div id ="subtitle"><b>Test Functions and Datasets</b></div>
+</a>
+</div><!--webtitle-->
+
+
+<!-- Navigation Bar -->
+<div id="bar">
+<iframe src="navbar.html" id="bar"></iframe>
+</div><!--navbar-->
+
+
+<!-- Content: Title -->
+<div id="content">
+<div id="title">
+<h3><a href="optimization.html">Optimization Test Problems</a></h3>
+<h3><a href="emulat.html">Emulation/Prediction Test Problems</a></h3>
+</div><!--title-->
+
+<!-- Content: Underline -->
+<div id="underline">
+<hr>
+</div><!--underline-->
+
+<!-- Content: Name -->
+<div id="name">
+<h2>Forrester et al. (2008) Function</h2>
+</div><!--name-->
+
+<!-- Content: Images -->
+<div id="plot">
+<br>
+<center><img src="forretal08.png" style="width:35em;"></img></center>
+<center><img src="forretal082.png"></img></center>
+</div><!--plot-->
+
+<!-- Content: General Information -->
+<div id="info">
+<h3 style="line-height: 0.8em;">Description:</h3>
+<i>Dimensions: 1</i>
+<br>
+<br>
+This function is a simple one-dimensional test function. It is multimodal, with one global minimum, one local minimum and a zero-gradient inflection point.
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Input Domain:</h3>
+The function is evaluated on x &isin; [0, 1].
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Modifications and Alternative Forms:</h3>
+For the purpose of multi-fidelity analysis, the following function is used for the lower fidelity code:
+<br>
+<br>
+<center><img src="forretal08lc2.png"></img></center>
+<br>
+Here, the constants A, B and C can be varied to improve the fidelity of the low-fidelity function. In the plot above, the values used are (as in Forrester et al., 2008): A = 0.5, B = 10, C = -5.
+<br>
+<br>
+<h3 style="line-height: 0.8em;">Code:</h3>
+<div id="codes">
+<a href="Code/forretal08m.html">MATLAB Implementation</a><br>
+<a href="Code/forretal08r.html">R Implementation</a><br>
+<a href="Code/forretal08lcm.html">MATLAB Implementation, Lower Fidelity</a><br>
+<a href="Code/forretal08lcr.html">R Implementation, Lower Fidelity</a>
+</div><!--codes-->
+<br>
+<h3 style="line-height: 0.8em;">Reference:</h3>
+<p>Forrester, A., Sobester, A., & Keane, A. (2008). <i>Engineering design via surrogate modelling: a practical guide</i>. Wiley.</p>
+<hr>
+<br>
+For questions or comments, please email Derek Bingham at: dbingham@stat.sfu.ca.
+<br>
+<br>
+<br>
+</div><!--info-->
+
+<!-- Content: Line -->
+<div id="line">
+</div><!--line-->
+<br>
+
+<!-- Content: Footer -->
+<div class="update">
+<span>LastUpdated</span>
+</div><!--update-->
+<div class="authors">
+<span>Authors</span>
+</div><!--authors-->
+<div class="copy">
+<span>Copy</span>
+</div><!--copy-->
+
+
+</div><!--content-->
+</div><!--main-->
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9105246; 
+var sc_invisible=1; 
+var sc_security="5a7599c2"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9105246/0/5a7599c2/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
