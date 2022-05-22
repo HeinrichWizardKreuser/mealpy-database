@@ -1,0 +1,64 @@
+name,call, sfu , infinity77 , benchmarkfcns 
+Ackley,benchmarknd.Functions()._ackley__,Ackley,Ackley,Ackley
+Ackley N2,benchmark2d.Functions()._ackley_n2__,,,Ackley N. 2
+Ackley N3,benchmark2d.Functions()._ackley_n3__,,,Ackley N. 3
+Ackley N4,benchmarknd.Functions()._ackley_n4__,,,Ackley N. 4
+Adjiman,benchmark2d.Functions()._adjiman__,,Adjiman,Adjiman
+Alpine N1,benchmarknd.Functions()._alpine_n1__,,Alpine 1,Alpine N. 1
+Alpine N2,benchmarknd.Functions()._alpine_n2__,,Alpine 2,Alpine N. 2
+Bartels Conn,benchmark2d.Functions()._bartels_conn__,,Bartels-Conn,Bartels Conn
+Beale,benchmark2d.Functions()._beale__,Beale,Beale,Beale
+Bird,benchmark2d.Functions()._bird__,,Bird,Bird
+Bohachevskyn N1,benchmark2d.Functions()._bohachevskyn_n1__,Bohachevsky Functions,Bohachevsky,Bohachevsky N. 1
+Bohachevskyn N2,benchmark2d.Functions()._bohachevskyn_n2__,,,Bohachevsky N. 2
+Booth,benchmark2d.Functions()._booth__,Booth,,Booth
+Brent,benchmark2d.Functions()._brent__,,Brent,Brent
+Brown,benchmarknd.Functions()._brown__,,Brown,Brown
+Bukin N6,benchmark2d.Functions()._bukin_n6__,Bukin Function N. 6,Bukin 6,Bukin N. 6
+Cross In Tray,benchmark2d.Functions()._cross_in_tray__,Cross-in-Tray,Cross-in-Tray,Cross-in-Tray
+Deckkers Aarts,benchmark2d.Functions()._deckkers_aarts__,,Deckkers-Aarts,Deckkers-Aarts
+Drop Wave,benchmark2d.Functions()._drop_wave__,Drop-Wave,DropWave,Drop-Wave
+Easom,benchmark2d.Functions()._easom__,Easom,Easom,Easom
+Egg Crate,benchmark2d.Functions()._egg_crate__,,Egg Crate,Egg Crate
+Exponential,benchmarknd.Functions()._exponential__,,Exponential,Exponential
+Goldstein Price,benchmark2d.Functions()._goldstein_price__,Goldstein-Price,Goldstein-Price,Goldstein-Price
+Gramacy Lee,benchmark1d.Functions()._gramacy_lee__,Gramacy & Lee (2012),,Gramacy & Lee
+Griewank,benchmarknd.Functions()._griewank__,Griewank,Griewank,Griewank
+Happy Cat,benchmarknd.Functions()._happy_cat__,,,Happy Cat
+Himmelblau,benchmark2d.Functions()._himmelblau__,,HimmelBlau,Himmelblau
+Holder Table,benchmark2d.Functions()._holder_table__,Holder Table,HolderTable,Holder-Table
+Keane,benchmark2d.Functions()._keane__,,Keane,Keane
+Leon,benchmark2d.Functions()._leon__,,Leon,Leon
+Levi N13,benchmark2d.Functions()._levi_n13__,Levy Function N. 13,Levy 3,Levi N. 13
+Matyas,benchmark2d.Functions()._matyas__,Matyas,Matyas,Matyas
+Mc Cormick,benchmark2d.Functions()._mc_cormick__,McCormick,McCormick,McCormick
+Periodic,benchmarknd.Functions()._periodic__,,,Periodic
+Powell Sum,benchmarknd.Functions()._powell_sum__,,Powell,Powell Sum
+Qing,benchmarknd.Functions()._qing__,,Qing,Qing
+Quartic,benchmarknd.Functions()._quartic__,,,Quartic
+Rastrigin,benchmarknd.Functions()._rastrigin__,Rastrigin,Rastrigin,Rastrigin
+Ridge,benchmarknd.Functions()._ridge__,,,Ridge
+Rosenbrock,benchmarknd.Functions()._rosenbrock__,Rosenbrock,Rosenbrock,Rosenbrock
+Salomon,benchmarknd.Functions()._salomon__,,Salomon,Salomon
+Schaffer N1,benchmark2d.Functions()._schaffer_n1__,,Schaffer 1,Schaffer N. 1
+Schaffer N2,benchmark2d.Functions()._schaffer_n2__,Schaffer Function N. 2,Schaffer 2,Schaffer N. 2
+Schaffer N3,benchmark2d.Functions()._schaffer_n3__,,Schaffer 3,Schaffer N. 3
+Schaffer N4,benchmark2d.Functions()._schaffer_n4__,Schaffer Function N. 4,Schaffer 4,Schaffer N. 4
+Schwefel,benchmarknd.Functions()._schwefel__,Schwefel,Schwefel 1,Schwefel
+Schwefel 2 20,benchmarknd.Functions()._schwefel_2_20__,,Schwefel 20,Schwefel 2.20
+Schwefel 2 21,benchmarknd.Functions()._schwefel_2_21__,,Schwefel 21,Schwefel 2.21
+Schwefel 2 22,benchmarknd.Functions()._schwefel_2_22__,,,Schwefel 2.22
+Schwefel 2 23,benchmarknd.Functions()._schwefel_2_23__,,,Schwefel 2.23
+Shubert,benchmarknd.Functions()._shubert__,Shubert,,Shubert
+Shubert 3,benchmarknd.Functions()._shubert_3__,,Shubert 3,Shubert 3
+Shubert 4,benchmarknd.Functions()._shubert_4__,,Shubert 4,
+Sphere,benchmarknd.Functions()._sphere__,Sphere,Sphere,Sphere
+Styblinski,benchmarknd.Functions()._styblinski__,Styblinski-Tang,StyblinskiTang,Styblinski-Tank
+Sum Squres,benchmarknd.Functions()._sum_squres__,Sum Squares,,Sum Squares
+Three Hump Camel,benchmark2d.Functions()._three_hump_camel__,Three-Hump Camel,Three Hump Camel,Three-Hump Camel
+Wolfe,benchmark3d.Functions()._wolfe__,,Wolfe,Wolfe
+Xin She Yang,benchmarknd.Functions()._xin_she_yang__,,Xin-She Yang 1,Xin-She Yang
+Xin She Yang N2,benchmarknd.Functions()._xin_she_yang_n2__,,Xin-She Yang 2,Xin-She Yang N. 2
+Xin She Yang N3,benchmarknd.Functions()._xin_she_yang_n3__,,Xin-She Yang 3,Xin-She Yang N. 3
+Xin She Yang N4,benchmarknd.Functions()._xin_she_yang_n4__,,Xin-She Yang 4,Xin-She Yang N. 4
+Zakharov,benchmarknd.Functions()._zakharov__,Zakharov,Zacharov,Zakharov

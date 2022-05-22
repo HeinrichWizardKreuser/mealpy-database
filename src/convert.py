@@ -26,9 +26,18 @@ def tags2dict(*tags):
         else:
             adict[pos] = False
     if tags:
+        dimension, tags = dimensional(*tags)
+        if dimension:
+            adict['dimension'] = dimension
+    if tags:
         raise ValueError(f'Unrecognized tags: {tags}')
     return adict
 
+def dimensional(*tags):
+    for i, tag in enumerate(tags):
+        if tag.endswith('-dimensional'):
+            return tag.removesuffix('-dimensional'), tags[:i] + tags[i+1:]
+    return None, tags 
 
 import pprint
 def format_tags(*tags):

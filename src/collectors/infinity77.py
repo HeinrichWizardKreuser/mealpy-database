@@ -69,13 +69,24 @@ def crawl_pages():
             latex = item.find('div', {'class': 'math'}).p.img.attrs['alt']
             # global optimum
             go = p[-1]
-            alts = [
-                img.attrs['alt'] 
-                for img in go.find_all('img')
-            ]
+
             # minima = ['f(x_i) = 0', 'x_i = 0', 'i=1,...,n']
-            minima_latex = ' for '.join(alts)
-            minima = alts[:2]
+            try:
+                index = go.index(go.find('img'))
+            except ValueError as ve:
+                go = p[-2]
+                index = go.index(go.find('img'))
+            alts = list(go.children)[index:]
+            minima_latex = ''
+            minima = []
+            for child in alts:
+                if isinstance(child, str):
+                    minima_latex += child.text
+                else:
+                    alt = child.attrs['alt'] 
+                    minima.append(alt)
+                    minima_latex += alt
+            minima = minima[:2]
 
             # x_i
             domain = get_domain(p)

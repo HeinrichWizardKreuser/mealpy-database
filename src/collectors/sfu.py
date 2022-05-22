@@ -67,6 +67,7 @@ def crawl_functions():
 
         domain = alist[index+1]
         domain_latex = domain[domain.find('x'):]
+        domain_latex = domain_latex.removesuffix('.')
 
         # link
         href = html_path.removeprefix(FUNCTION_PATH)

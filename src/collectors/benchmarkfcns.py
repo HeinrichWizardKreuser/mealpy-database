@@ -68,6 +68,7 @@ def extract(filepath, adict):
     # split the domain up into python and latex
     domain = adict['Input Domain'][0]
     domain_latex = domain[domain.find('$'):]
+    domain_latex = domain_latex.removesuffix('.')
 
     a, b = domain_latex.find('['), domain_latex.find(']')
     domain = domain_latex[a:b+1]
