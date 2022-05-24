@@ -15,10 +15,9 @@ infinity77.crawl_pages()
 benchmarkfcns.crawl_markdown()
 
 """
-We just need to complete the
-- references
-- tags
-for the db.py file. 
+Now that db file is complete, we want to take it for a test run.
+
+We will first need to write a version of the db.py file that has a single value for each field instead of a list of values
 
 Then we need to write a notebook where we show off the following
 
