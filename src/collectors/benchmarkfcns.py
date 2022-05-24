@@ -51,7 +51,7 @@ def extract(filepath, adict):
             ref += (' ' + line.strip())
     refs.append(ref)
     refs = [
-        ref[1:ref.find(']')]
+        ref[:ref.find(']')].removeprefix('[')
         for ref in refs
     ]
 

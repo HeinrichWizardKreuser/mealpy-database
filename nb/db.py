@@ -1,7 +1,7 @@
 data = [
     # Ackley
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-32, 32],
         domain_latex=
             r"xi ∈ [-32.768, 32.768], for all i = 1, …, d, although it may also be restricted to a smaller domain",
@@ -16,19 +16,32 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/ackleyfcn.markdown",
         ],
         method=benchmarknd.Functions()._ackley__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum at: $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name="Ackley",
-        references=
-            ['Adorio, E. P., & Diliman, U. P. MVF - Multivariate Test Functions Library in C for Unconstrained Global Optimization (2005). Retrieved June 2013, from http://http://www.geocities.ws/eadorio/mvf.pdf.', 'Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.', 'Back, T. (1996). Evolutionary algorithms in theory and practice: evolution strategies, evolutionary programming, genetic algorithms. Oxford University Press on Demand.'],
-            ['http://www.sfu.ca/~ssurjano/ackley.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'http://www.cs.unm.edu/~neal.holts/dga/benchmarkFunction/ackley.html'],
-        tags=TODO,
+        references=[
+            "Adorio, E. P., & Diliman, U. P. MVF - Multivariate Test Functions Library in C for Unconstrained Global Optimization (2005). Retrieved June 2013, from http://http://www.geocities.ws/eadorio/mvf.pdf.",
+            "Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.",
+            "Back, T. (1996). Evolutionary algorithms in theory and practice: evolution strategies, evolutionary programming, genetic algorithms. Oxford University Press on Demand.",
+            "http://www.sfu.ca/~ssurjano/ackley.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "http://www.cs.unm.edu/~neal.holts/dga/benchmarkFunction/ackley.html",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Ackley N2
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-32, 32],
         domain_latex=r"$x_i \in [-32, 32]$ for $i=1, 2$",
         latex=r"$$f(x, y) = -200e^{-0.2\sqrt{x^2 + y^2}}$$",
@@ -39,13 +52,23 @@ data = [
         minima=None,
         minima_latex=r"The function has a global minimum at $f(\textbf{x}^{\ast})=-200$ located at $\mathbf{x^\ast}=(0, 0)$.",
         name="Ackley N. 2",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. H. Ackley, “A Connectionist Machine for Genetic Hill-Climbing,” Kluwer, 1987'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "D. H. Ackley, “A Connectionist Machine for Genetic Hill-Climbing,” Kluwer, 1987",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Ackley N3
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-32, 32],
         domain_latex=r"$x_i \in [-32, 32]$ for $i=1, 2$",
         latex=r"$$f(x, y) = -200e^{-0.2\sqrt{x^2 + y^2}} + 5e^{cos(3x) + sin(3y)}$$",
@@ -56,13 +79,24 @@ data = [
         minima=None,
         minima_latex=r"The function has two global minima at $f(\textbf{x}^{\ast})\approx -195.629028238419$ located at $\mathbf{x^\ast}=(\pm0.682584587365898, -0.36075325513719)$.",
         name="Ackley N. 3",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), arXiv:1308.400', '. H. Ackley, “A Connectionist Machine for Genetic Hill-Climbing,” Kluwer, 1987', 'ayak B., Dash S.K., Sahu J.B. (2019) Validation of Well-Known Population-Based Stochastic Optimization Algorithms Using Benchmark Functions. In: Bansal J., Das K., Nagar A., Deep K., Ojha A. (eds) Soft Computing for Problem Solving. Advances in Intelligent Systems and Computing, vol 816. Springer, Singapor'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), arXiv:1308.400",
+            "D. H. Ackley, “A Connectionist Machine for Genetic Hill-Climbing,” Kluwer, 1987",
+            "Nayak B., Dash S.K., Sahu J.B. (2019) Validation of Well-Known Population-Based Stochastic Optimization Algorithms Using Benchmark Functions. In: Bansal J., Das K., Nagar A., Deep K., Ojha A. (eds) Soft Computing for Problem Solving. Advances in Intelligent Systems and Computing, vol 816. Springer, Singapor",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Ackley N4
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-35, 35],
         domain_latex=r"$x_i \in [-35, 35]$ for $i=1, ..., n$",
         latex=r"$$f(\textbf{x})=\sum_{i=1}^{n-1}\left( e^{-0.2}\sqrt{x_i^2+x_{i+1}^2} + 3\left( cos(2x_i) + sin(2x_{i+1}) \right) \right)$$",
@@ -73,13 +107,22 @@ data = [
         minima=None,
         minima_latex=r"On the 2-dimensional space, the function has one global minima at $f(\textbf{x}^{\ast}) = -4.590101633799122$ located at $\mathbf{x^\ast}=(-1.51, -0.755)$.",
         name="Ackley N. 4",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Adjiman
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-1, 2],
         domain_latex=
             r"x_1 \in [-1, 2], x_2 \in [-1, 1]",
@@ -92,18 +135,29 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/adjimanfcn.markdown",
         ],
         method=benchmark2d.Functions()._adjiman__,
-        minima=dict("f(x_i)"=-2.02181, "\mathbf{x}"=[2, 0.10578]),
+        minima=dict(r"f(x_i)"=-2.02181, r"\mathbf{x}"=[2, 0.10578]),
         minima_latex=
             r"f(x_i) = -2.02181 for \mathbf{x} = [2, 0.10578]",
             r"On the on $x \in [-1, 2]$ and $x \in [-1, 1]$ cube, the global minimum $f(\textbf{x}^{\ast})=-2.02181$ is located at $\mathbf{x^\ast}=(0, 0)$.",
         name="Adjiman",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. S. Adjiman, S. Sallwig, C. A. Flouda, A. Neumaier, "A Global Optimization Method, aBB for General Twice-Differentiable NLPs-1, Theoretical Advances," Computers Chemical Engineering, vol. 22, no. 9, pp. 1137-1158, 1998', 'ing, A., "Differential Evolution: Fundamentals and Applications in Electrical Engineering", Wiley, 2009. [https://books.google.com/books?id=Pp-SHz6dIJ0C'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "C. S. Adjiman, S. Sallwig, C. A. Flouda, A. Neumaier, "A Global Optimization Method, aBB for General Twice-Differentiable NLPs-1, Theoretical Advances," Computers Chemical Engineering, vol. 22, no. 9, pp. 1137-1158, 1998",
+            "Qing, A., "Differential Evolution: Fundamentals and Applications in Electrical Engineering", Wiley, 2009. [https://books.google.com/books?id=Pp-SHz6dIJ0C",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Alpine N1
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=
             [-10, 10],
             [0, 10],
@@ -118,20 +172,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/alpinen1fcn.markdown",
         ],
         method=benchmarknd.Functions()._alpine_n1__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has a global minimum  $f(\textbf{x}^{\ast})=0$ located at $\mathbf{x^\ast}=(0, ..., 0)$.",
         name=
             "Alpine 1",
             "Alpine N. 1",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. Clerc, “The Swarm and the Queen, Towards a Deterministic and Adaptive Particle Swarm Optimization, ” IEEE Congress on Evolutionary Computation, Washington DC, USA, pp. 1951-1957, 1999'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "M. Clerc, “The Swarm and the Queen, Towards a Deterministic and Adaptive Particle Swarm Optimization, ” IEEE Congress on Evolutionary Computation, Washington DC, USA, pp. 1951-1957, 1999",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Alpine N2
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[0, 10],
         domain_latex=
             r"x_i \in [0, 10], i=1,...,n",
@@ -144,20 +208,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/alpinen2fcn.markdown",
         ],
         method=benchmarknd.Functions()._alpine_n2__,
-        minima=dict("f(x_i)"=-6.1295, "x_i"=7.917),
+        minima=dict(r"f(x_i)"=-6.1295, r"x_i"=7.917),
         minima_latex=
             r"f(x_i) = -6.1295 for x_i = 7.917 for i=1,...,n",
             r"The function was devised By Clerc as a maximization problem and hence, the orginial paper gave  $f(\textbf{x}^{\ast})=2.808^n$, ",
         name=
             "Alpine 2",
             "Alpine N. 2",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. Clerc, “The Swarm and the Queen, Towards a Deterministic and Adaptive Particle Swarm Optimization, ” IEEE Congress on Evolutionary Computation, Washington DC, USA, pp. 1951-1957, 1999'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "M. Clerc, “The Swarm and the Queen, Towards a Deterministic and Adaptive Particle Swarm Optimization, ” IEEE Congress on Evolutionary Computation, Washington DC, USA, pp. 1951-1957, 1999",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Bartels Conn
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=
             [-50, 50],
             [-500, 500],
@@ -172,16 +246,25 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/bartelsconnfcn.markdown",
         ],
         method=benchmark2d.Functions()._bartels_conn__,
-        minima=dict("f(x_i)"=1, "x_i"=0),
+        minima=dict(r"f(x_i)"=1, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 1 for x_i = 0 for i=1,...,n",
             r"The global minimum $f(\textbf{x}^{\ast})=1$ is located at $\mathbf{x^\ast}=(0, 0)$.",
         name=
             "Bartels Conn",
             "Bartels-Conn",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Beale
     dict(
@@ -202,19 +285,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/bealefcn.markdown",
         ],
         method=benchmark2d.Functions()._beale__,
-        minima=dict("f(x_i)"=0, "\mathbf{x}"=[3, 0.5]),
+        minima=dict(r"f(x_i)"=0, r"\mathbf{x}"=[3, 0.5]),
         minima_latex=
             r"f(x_i) = 0 for \mathbf{x} = [3, 0.5]",
             r"The function has one global minimum at: $f(x^*)=0$ at $\textbf{x}^{\ast} = (3, 0.5)$.",
         name="Beale",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['http://www.sfu.ca/~ssurjano/ackley.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page288.htm'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "http://www.sfu.ca/~ssurjano/ackley.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page288.htm",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Bird
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=
             [-2np.pi, 2np.pi],
             [-2*np.pi, 2*np.pi],
@@ -229,14 +323,24 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/birdfcn.markdown",
         ],
         method=benchmark2d.Functions()._bird__,
-        minima=dict("f(x_i)"=-106.7645367198034, "\mathbf{x}"=[4.701055751981055 , 3.152946019601391]),
+        minima=dict(r"f(x_i)"=-106.7645367198034, r"\mathbf{x}"=[4.701055751981055 , 3.152946019601391]),
         minima_latex=
             r"f(x_i) = -106.7645367198034 for \mathbf{x} = [4.701055751981055 , 3.152946019601391] or\n\mathbf{x} = [-1.582142172055011, -3.130246799635430]",
             r"The function has two global minima at $f(\textbf{x}^{\ast}) = -106.764537$ located at $\mathbf{x^\ast}=(4.70104, 3.15294)$ and $\mathbf{x^\ast}=(-1.58214, -3.13024)$.",
         name="Bird",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. K. Mishra, “Global Optimization By Differential Evolution and Particle Swarm Methods: Evaluation On Some Benchmark Functions,” Munich Research Papers in Economics, Available Online: [http://mpra.ub.uni-muenchen.de/1005/'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "S. K. Mishra, “Global Optimization By Differential Evolution and Particle Swarm Methods: Evaluation On Some Benchmark Functions,” Munich Research Papers in Economics, Available Online: [http://mpra.ub.uni-muenchen.de/1005/",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Bohachevskyn N1
     dict(
@@ -257,7 +361,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/bohachevskyn1fcn.markdown",
         ],
         method=benchmark2d.Functions()._bohachevskyn_n1__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one local minimum at: $f(\textbf{x}^{\ast}) = 0$ at $\textbf{x}^{\ast} = (0, 0)$",
@@ -265,14 +369,23 @@ data = [
             "Bohachevsky",
             "Bohachevsky Functions",
             "Bohachevsky N. 1",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['ttp://www.sfu.ca/~ssurjano/boha.htm'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "http://www.sfu.ca/~ssurjano/boha.htm",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Bohachevskyn N2
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-100, 100],
         domain_latex=r"$x_i \in [-100, 100]$ for $i=1, 2$",
         latex=r"$$f(x, y)=x^2 + 2y^2 -0.3cos(3\pi x)cos(4\pi y)+0.3$$",
@@ -283,9 +396,19 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum $f(\textbf{x}^{\ast}) = 0$ located at $\mathbf{x^\ast}=(0, 0)$.",
         name="Bohachevsky N. 2",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. O. Bohachevsky, M. E. Johnson, M. L. Stein, “General Simulated Annealing for Function Optimization,” Technometrics, vol. 28, no. 3, pp. 209-217, 1986'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "I. O. Bohachevsky, M. E. Johnson, M. L. Stein, “General Simulated Annealing for Function Optimization,” Technometrics, vol. 28, no. 3, pp. 209-217, 1986",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Booth
     dict(
@@ -303,14 +426,25 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum at: $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (1,3)$.",
         name="Booth",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['http://www.sfu.ca/~ssurjano/booth.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "http://www.sfu.ca/~ssurjano/booth.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Brent
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=
             [-10, 10],
             [-20, 0],
@@ -325,18 +459,27 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/brentfcn.markdown",
         ],
         method=benchmark2d.Functions()._brent__,
-        minima=dict("f(x_i)"=0, "\mathbf{x}"=[-10, -10]),
+        minima=dict(r"f(x_i)"=0, r"\mathbf{x}"=[-10, -10]),
         minima_latex=
             r"f(x_i) = 0 for \mathbf{x} = [-10, -10]",
             r"The function has one global minimum at $f(\textbf{x}^{\ast})= e^{-200}$ located at $\mathbf{x^\ast}=(-10, -10)$.",
         name="Brent",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Brown
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-1, 4],
         domain_latex=
             r"x_i \in [-1, 4], i=1,...,n",
@@ -349,14 +492,23 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/brownfcn.markdown",
         ],
         method=benchmarknd.Functions()._brown__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum at $f(\textbf{x}^{\ast})= 0$ located at $\mathbf{x^\ast}=\textbf{0}$.",
         name="Brown",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Bukin N6
     dict(
@@ -375,7 +527,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/bukinn6fcn.markdown",
         ],
         method=benchmark2d.Functions()._bukin_n6__,
-        minima=dict("f(x_i)"=0, "\mathbf{x}"=[-10, 1]),
+        minima=dict(r"f(x_i)"=0, r"\mathbf{x}"=[-10, 1]),
         minima_latex=
             r"f(x_i) = 0 for \mathbf{x} = [-10, 1]",
             r"The function has one global minimum at: $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (-10,1)$.",
@@ -383,10 +535,21 @@ data = [
             "Bukin 6",
             "Bukin Function N. 6",
             "Bukin N. 6",
-        references=
-            ['Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.'],
-            ['http://www.sfu.ca/~ssurjano/booth.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.",
+            "http://www.sfu.ca/~ssurjano/booth.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Cross In Tray
     dict(
@@ -407,19 +570,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/crossintrayfcn.markdown",
         ],
         method=benchmark2d.Functions()._cross_in_tray__,
-        minima=dict("f(x_i)"=-2.062611870822739, "x_i"=r"\pm 1.349406608602084"),
+        minima=dict(r"f(x_i)"=-2.062611870822739, r"x_i"=r"\pm 1.349406608602084"),
         minima_latex=
             r"f(x_i) = -2.062611870822739 for x_i = \pm 1.349406608602084 for i=1,2",
             r"The function has four global minima $f(\textbf{x}^{\ast})=-2.06261218$ at $\textbf{x}^{\ast} = (\pm1.349406685353340,\pm1.349406608602084)$.",
         name="Cross-in-Tray",
-        references=
-            ['Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.'],
-            ['http://www.sfu.ca/~ssurjano/crossit.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.",
+            "http://www.sfu.ca/~ssurjano/crossit.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Deckkers Aarts
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-20, 20],
         domain_latex=
             r"x_i \in [-20, 20], i=1,2",
@@ -432,14 +606,24 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/deckkersaartsfcn.markdown",
         ],
         method=benchmark2d.Functions()._deckkers_aarts__,
-        minima=dict("f(x_i)"=-24777, "\mathbf{x}"=r"[0, \pm 15]"),
+        minima=dict(r"f(x_i)"=-24777, r"\mathbf{x}"=r"[0, \pm 15]"),
         minima_latex=
             r"f(x_i) = -24777 for \mathbf{x} = [0, \pm 15]",
             r"The global minima $f(\textbf{x}^{\ast})=-24771.09375$ are located at $\mathbf{x^\ast}=(0, \pm 15)$.",
         name="Deckkers-Aarts",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. M. Ali, C. Khompatraporn, Z. B. Zabinsky, “A Numerical Evaluation of Several Stochastic Algorithms on Selected Continuous Global Optimization Test Problems,” Journal of Global Optimization, vol. 31, pp. 635-672, 2005'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "M. M. Ali, C. Khompatraporn, Z. B. Zabinsky, “A Numerical Evaluation of Several Stochastic Algorithms on Selected Continuous Global Optimization Test Problems,” Journal of Global Optimization, vol. 31, pp. 635-672, 2005",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Drop Wave
     dict(
@@ -460,17 +644,26 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/dropwavefcn.markdown",
         ],
         method=benchmark2d.Functions()._drop_wave__,
-        minima=dict("f(x_i)"=-1, "x_i"=0),
+        minima=dict(r"f(x_i)"=-1, r"x_i"=0),
         minima_latex=
             r"f(x_i) = -1 for x_i = 0 for i=1,2",
             r"$f(\textbf{x}^{\ast}) = -1$ at $\textbf{x}^{\ast} = (0, 0)$",
         name=
             "Drop-Wave",
             "DropWave",
-        references=
-            ['Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.'],
-            ['ttp://www.sfu.ca/~ssurjan'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.",
+            "http://www.sfu.ca/~ssurjan",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Easom
     dict(
@@ -489,19 +682,31 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/easomfcn.markdown",
         ],
         method=benchmark2d.Functions()._easom__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,2",
             r"The function has four global minima $f(x^{\ast}, y^{\ast})=-1$ at $(x^{\ast}, y^{\ast}) = (\pi,\pi)$.",
         name="Easom",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['http://www.sfu.ca/~ssurjano/easom.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', 'http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page1361.htm'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "http://www.sfu.ca/~ssurjano/easom.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page1361.htm",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Egg Crate
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-5, 5],
         domain_latex=
             r"x_i \in [-5, 5], i=1,2",
@@ -514,18 +719,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/eggcratefcn.markdown",
         ],
         method=benchmark2d.Functions()._egg_crate__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,2",
             r"The global minimum $f(\textbf{x}^{\ast})=0$ is located at $\mathbf{x^\ast}=(0, 0)$.",
         name="Egg Crate",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', 'http://al-roomi.org/benchmarks/unconstrained/2-dimensions/122-egg-crate-function', 'hawdhry, P. K., Roy, R., & Pant, R. K. (2012). Soft Computing in Engineering Design and Manufacturing. London: Springer Science & Business Media', 'ang, X.S. (2008). Nature-Inspired Metaheuristic Algorithms, Luniver Press'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "http://al-roomi.org/benchmarks/unconstrained/2-dimensions/122-egg-crate-function",
+            "Chawdhry, P. K., Roy, R., & Pant, R. K. (2012). Soft Computing in Engineering Design and Manufacturing. London: Springer Science & Business Media",
+            "Yang, X.S. (2008). Nature-Inspired Metaheuristic Algorithms, Luniver Press",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Exponential
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-1, 1],
         domain_latex=
             r"x_i \in [-1, 1], i=1,...,n",
@@ -538,14 +755,24 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/exponentialfcn.markdown",
         ],
         method=benchmarknd.Functions()._exponential__,
-        minima=dict("f(x_i)"=-1, "x_i"=0),
+        minima=dict(r"f(x_i)"=-1, r"x_i"=0),
         minima_latex=
             r"f(x_i) = -1 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=$ at $\mathbf{x^\ast}=0$.",
         name="Exponential",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. Rahnamyan, H. R. Tizhoosh, N. M. M. Salama, “Opposition-Based Differential Evolution (ODE) with Variable Jumping Rate,” IEEE Sympousim Foundations Computation Intelligence, Honolulu, HI, pp. 81-88, 2007'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "S. Rahnamyan, H. R. Tizhoosh, N. M. M. Salama, “Opposition-Based Differential Evolution (ODE) with Variable Jumping Rate,” IEEE Sympousim Foundations Computation Intelligence, Honolulu, HI, pp. 81-88, 2007",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Goldstein Price
     dict(
@@ -564,15 +791,28 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/goldsteinpricefcn.markdown",
         ],
         method=benchmark2d.Functions()._goldstein_price__,
-        minima=dict("f(x_i)"=3, "\mathbf{x}"=[0, -1]),
+        minima=dict(r"f(x_i)"=3, r"\mathbf{x}"=[0, -1]),
         minima_latex=
             r"f(x_i) = 3 for \mathbf{x} = [0, -1]",
             r"The function has four global minima $f(\textbf{x}^{\ast})=3$ at $\textbf{x}^{\ast} = (0, -1)$.",
         name="Goldstein-Price",
-        references=
-            ['Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. Towards global optimization, 2, 1-15.', 'Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.', 'Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.'],
-            ['http://www.sfu.ca/~ssurjano/goldpr.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. Towards global optimization, 2, 1-15.",
+            "Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.",
+            "Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.",
+            "http://www.sfu.ca/~ssurjano/goldpr.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Gramacy Lee
     dict(
@@ -592,14 +832,25 @@ data = [
         name=
             "Gramacy & Lee",
             "Gramacy & Lee (2012)",
-        references=
-            ['Gramacy, R. B., & Lee, H. K. (2012). Cases for the nugget in modeling computer experiments. Statistics and Computing, 22(3), 713-722.', 'Ranjan, P. (2013). Comment: EI Criteria for Noisy Computer Simulators. Technometrics, 55(1), 24-28.'],
-            ['http://www.sfu.ca/~ssurjano/boha.html', 'http://al-roomi.org/benchmarks/unconstrained/1-dimension/258-gramacy-lee-s-function-no-1'],
-        tags=TODO,
+        references=[
+            "Gramacy, R. B., & Lee, H. K. (2012). Cases for the nugget in modeling computer experiments. Statistics and Computing, 22(3), 713-722.",
+            "Ranjan, P. (2013). Comment: EI Criteria for Noisy Computer Simulators. Technometrics, 55(1), 24-28.",
+            "http://www.sfu.ca/~ssurjano/boha.html",
+            "http://al-roomi.org/benchmarks/unconstrained/1-dimension/258-gramacy-lee-s-function-no-1",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Griewank
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-600, 600],
         domain_latex=
             r"xi ∈ [-600, 600], for all i = 1, …, d",
@@ -614,19 +865,29 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/griewankfcn.markdown",
         ],
         method=benchmarknd.Functions()._griewank__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"$f(\textbf{x}^{\ast}) = 0$ at $\textbf{x}^{\ast} = (0, ..., 0)$",
         name="Griewank",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.', 'Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.'],
-            ['ttp://www.sfu.ca/~ssurjan'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.",
+            "http://www.sfu.ca/~ssurjan",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Happy Cat
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-2, 2],
         domain_latex=r"$x_i \in [-2, 2]$ for $i=1, ..., n$",
         latex=r"$$f(\textbf{x})=\left[\left(||\textbf{x}||^2 - n\right)^2\right]^\alpha + \frac{1}{n}\left(\frac{1}{2}||\textbf{x}||^2+\sum_{i=1}^{n}x_i\right)+\frac{1}{2}$$",
@@ -637,13 +898,22 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum at $f(\textbf{x}^{\ast}) = 0$ located at $\mathbf{x^\ast}=(-1, ..., -1)$.",
         name="Happy Cat",
-        references=
-            ['ans-Georg Beyer and Steffen Finck, HappyCat – A Simple Function Class Where Well-Known Direct Search Algorithms Do Fail, Parallel Problem Solving from Nature - PPSN XII, pp. 367--376 (2012), [https://doi.org/10.1007/978-3-642-32937-1_37'],
-        tags=TODO,
+        references=[
+            "Hans-Georg Beyer and Steffen Finck, HappyCat – A Simple Function Class Where Well-Known Direct Search Algorithms Do Fail, Parallel Problem Solving from Nature - PPSN XII, pp. 367--376 (2012), [https://doi.org/10.1007/978-3-642-32937-1_37",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=True,
     ),
     # Himmelblau
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-6, 6],
         domain_latex=
             r"x_i \in [-6, 6], i=1,2",
@@ -656,16 +926,25 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/himmelblaufcn.markdown",
         ],
         method=benchmark2d.Functions()._himmelblau__,
-        minima=dict("f(x_i)"=0, "\mathbf{x}"=[0, 0]),
+        minima=dict(r"f(x_i)"=0, r"\mathbf{x}"=[0, 0]),
         minima_latex=
             r"f(x_i) = 0 for \mathbf{x} = [0, 0]",
             r"The function has four local minima at: ",
         name=
             "HimmelBlau",
             "Himmelblau",
-        references=
-            ['ttps://en.wikipedia.org/wiki/Himmelblau%27s_functio'],
-        tags=TODO,
+        references=[
+            "https://en.wikipedia.org/wiki/Himmelblau%27s_functio",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Holder Table
     dict(
@@ -684,7 +963,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/holdertablefcn.markdown",
         ],
         method=benchmark2d.Functions()._holder_table__,
-        minima=dict("f(x_i)"=-19.20850256788675, "x_i"=r"\pm 9.664590028909654"),
+        minima=dict(r"f(x_i)"=-19.20850256788675, r"x_i"=r"\pm 9.664590028909654"),
         minima_latex=
             r"f(x_i) = -19.20850256788675 for x_i = \pm 9.664590028909654 for i=1,2",
             r"The function has four global minima $f(\textbf{x}^{\ast})=-19.2085$ at $\textbf{x}^{\ast} = (\pm 8.05502,\pm 9.66459)$.",
@@ -692,14 +971,25 @@ data = [
             "Holder Table",
             "Holder-Table",
             "HolderTable",
-        references=
-            ['Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.', 'Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.'],
-            ['http://www.sfu.ca/~ssurjano/holder.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.",
+            "Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.",
+            "http://www.sfu.ca/~ssurjano/holder.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Keane
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[0, 10],
         domain_latex=
             r"x_i \in [0, 10], i=1,2",
@@ -712,18 +1002,28 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/kealefcn.markdown",
         ],
         method=benchmark2d.Functions()._keane__,
-        minima=dict("f(x_i)"=0.673668, "\mathbf{x}"=[0.0, 1.39325]),
+        minima=dict(r"f(x_i)"=0.673668, r"\mathbf{x}"=[0.0, 1.39325]),
         minima_latex=
             r"f(x_i) = 0.673668 for \mathbf{x} = [0.0, 1.39325].",
             r"The function has two global minima $f(\textbf{x}^{\ast})=0.673667521146855$ at ",
         name="Keane",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', 'http://al-roomi.org/benchmarks/unconstrained/2-dimensions/135-keane-s-function'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "http://al-roomi.org/benchmarks/unconstrained/2-dimensions/135-keane-s-function",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Leon
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=
             [-1.2, 1.2],
             [0, 10],
@@ -738,14 +1038,25 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/leonfcn.markdown",
         ],
         method=benchmark2d.Functions()._leon__,
-        minima=dict("f(x_i)"=0, "x_i"=1),
+        minima=dict(r"f(x_i)"=0, r"x_i"=1),
         minima_latex=
             r"f(x_i) = 0 for x_i = 1 for i=1,2",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (1,1)$.",
         name="Leon",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. Lavi, T. P. Vogel (eds), “Recent Advances in Optimization Techniques,” John Wiley & Sons, 196', 'http://al-roomi.org/benchmarks/unconstrained/2-dimensions/125-leon-s-function'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "A. Lavi, T. P. Vogel (eds), “Recent Advances in Optimization Techniques,” John Wiley & Sons, 196",
+            "http://al-roomi.org/benchmarks/unconstrained/2-dimensions/125-leon-s-function",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Levi N13
     dict(
@@ -764,7 +1075,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/levin13fcn.markdown",
         ],
         method=benchmark2d.Functions()._levi_n13__,
-        minima=dict("f(x_i)"=0, "x_i"=1),
+        minima=dict(r"f(x_i)"=0, r"x_i"=1),
         minima_latex=
             r"f(x_i) = 0 for x_i = 1 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (1, 1)$.",
@@ -772,10 +1083,20 @@ data = [
             "Levi N. 13",
             "Levy 3",
             "Levy Function N. 13",
-        references=
-            ['Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.'],
-            ['http://www.sfu.ca/~ssurjano/levy13.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.",
+            "http://www.sfu.ca/~ssurjano/levy13.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Matyas
     dict(
@@ -794,15 +1115,26 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/matyasfcn.markdown",
         ],
         method=benchmark2d.Functions()._matyas__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,2",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, 0)$.",
         name="Matyas",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['http://www.sfu.ca/~ssurjano/matya.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "http://www.sfu.ca/~ssurjano/matya.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Mc Cormick
     dict(
@@ -821,19 +1153,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/mccormickfcn.markdown",
         ],
         method=benchmark2d.Functions()._mc_cormick__,
-        minima=dict("f(x_i)"=-1.913222954981037, "\mathbf{x}"=[-0.5471975602214493, -1.547197559268372]),
+        minima=dict(r"f(x_i)"=-1.913222954981037, r"\mathbf{x}"=[-0.5471975602214493, -1.547197559268372]),
         minima_latex=
             r"f(x_i) = -1.913222954981037 for \mathbf{x} = [-0.5471975602214493, -1.547197559268372]",
             r"The function has one global minimum $f(\textbf{x}^{\ast})\approx −1.9133$ at $\textbf{x}^{\ast} = (−0.547,−1.547)$.",
         name="McCormick",
-        references=
-            ['Adorio, E. P., & Diliman, U. P. MVF - Multivariate Test Functions Library in C for Unconstrained Global Optimization (2005). Retrieved June 2013, from http://http://www.geocities.ws/eadorio/mvf.pdf.'],
-            ['http://www.sfu.ca/~ssurjano/mccorm.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Adorio, E. P., & Diliman, U. P. MVF - Multivariate Test Functions Library in C for Unconstrained Global Optimization (2005). Retrieved June 2013, from http://http://www.geocities.ws/eadorio/mvf.pdf.",
+            "http://www.sfu.ca/~ssurjano/mccorm.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Periodic
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-10 10],
         domain_latex=r"$x_i \in [-10 10]$ for $i=1 ... n$",
         latex=r"$$f(\mathbf{x})=f(x_1 ... x_n)=1 + \sum_{i=1}^{n}{sin^2(x_i)}-0.1e^{(\sum_{i=1}^{n}x_i^2)}$$",
@@ -844,13 +1187,23 @@ data = [
         minima=None,
         minima_latex=r"The function has on global minimum $f(\mathbf{x}^{\ast})=0.9$ at $\mathbf{x}^{\ast}=(0 ... 0)$.",
         name="Periodic",
-        references=
-            ['omin Jamil and Xin-She Yang A literature survey of benchmark functions for global optimization problems Int. Journal of Mathematical Modelling and Numerical Optimisation} Vol. 4 No. 2 pp. 150--194 (2013) [arXiv:1308.4008', '. M. Ali C. Khompatraporn Z. B. Zabinsky “A Numerical Evaluation of Several Stochastic Algorithms on Selected Continuous Global Optimization Test Problems,” Journal of Global Optimization vol. 31 pp. 635-672 2005'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang A literature survey of benchmark functions for global optimization problems Int. Journal of Mathematical Modelling and Numerical Optimisation} Vol. 4 No. 2 pp. 150--194 (2013) [arXiv:1308.4008",
+            "M. M. Ali C. Khompatraporn Z. B. Zabinsky “A Numerical Evaluation of Several Stochastic Algorithms on Selected Continuous Global Optimization Test Problems,” Journal of Global Optimization vol. 31 pp. 635-672 2005",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Powell Sum
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=
             [-4, 5],
             [-1, 1],
@@ -865,20 +1218,31 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/powellsumfcn.markdown",
         ],
         method=benchmarknd.Functions()._powell_sum__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,4",
             r"The function has one global minimum $f(\mathbf{x}^{\ast})=0$ at $\mathbf{x}^{\ast} = 0$.",
         name=
             "Powell",
             "Powell Sum",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. Rahnamyan, H. R. Tizhoosh, N. M. M. Salama, “A Novel Population Initialization Method for Accelerating Evolutionary Algorithms,” Computers and Mathematics with Applications, vol. 53, no. 10, pp. 1605-1614, 2007', 'ukhopadhyay, Sumitra; Das, Soumyadip, (2016), A System on Chip Development of Customizable GA Architecture for Real Parameter Optimization Problem, in Handbook of Research on Natural Computing for Optimization Problems, IGI Global'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "S. Rahnamyan, H. R. Tizhoosh, N. M. M. Salama, “A Novel Population Initialization Method for Accelerating Evolutionary Algorithms,” Computers and Mathematics with Applications, vol. 53, no. 10, pp. 1605-1614, 2007",
+            "Mukhopadhyay, Sumitra; Das, Soumyadip, (2016), A System on Chip Development of Customizable GA Architecture for Real Parameter Optimization Problem, in Handbook of Research on Natural Computing for Optimization Problems, IGI Global",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Qing
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-500, 500],
         domain_latex=
             r"x_i \in [-500, 500], i=1,...,n",
@@ -891,18 +1255,28 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/qingfcn.markdown",
         ],
         method=benchmarknd.Functions()._qing__,
-        minima=dict("f(x_i)"=0, "x_i"=r"\pm \sqrt(i)"),
+        minima=dict(r"f(x_i)"=0, r"x_i"=r"\pm \sqrt(i)"),
         minima_latex=
             r"f(x_i) = 0 for x_i = \pm \sqrt(i) for i=1,...,n",
             r"The global minima $f(\textbf{x}^{\ast})=0$ are located at $\mathbf{x^\ast}=(\pm\sqrt{i}, ..., \pm\sqrt{i})$.",
         name="Qing",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. Qing, “Dynamic Differential Evolution Strategy and Applications in Electromagnetic Inverse Scattering Problems,” IEEE Transactions on Geoscience and remote Sensing, vol. 44, no. 1, pp. 116-125, 2006'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "A. Qing, “Dynamic Differential Evolution Strategy and Applications in Electromagnetic Inverse Scattering Problems,” IEEE Transactions on Geoscience and remote Sensing, vol. 44, no. 1, pp. 116-125, 2006",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Quartic
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-1.28, 1.28],
         domain_latex=r"$x_i \in [-1.28, 1.28]$ for $i=1, ..., n$",
         latex=r"$$f(\mathbf{x})=f(x_1,...,x_n)=\sum_{i=1}^{n}ix_i^4+\text{random}[0,1)$$",
@@ -913,13 +1287,24 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum $f(\textbf{x}^{\ast})=0 + \it\text{random noise}$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name="Quartic",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', 'http://www.cs.unm.edu/~neal.holts/dga/benchmarkFunction/quartic.html', '. Storn, K. Price, “Differntial Evolution - A Simple and Efficient Adaptive Scheme for Global Optimization over Continuous Spaces,” Technical Report no. TR-95-012, International Computer Science Institute, Berkeley, CA, 1996. [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "http://www.cs.unm.edu/~neal.holts/dga/benchmarkFunction/quartic.html",
+            "R. Storn, K. Price, “Differntial Evolution - A Simple and Efficient Adaptive Scheme for Global Optimization over Continuous Spaces,” Technical Report no. TR-95-012, International Computer Science Institute, Berkeley, CA, 1996. [Available Online",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=True,
+        parametric=False,
     ),
     # Rastrigin
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-5.12, 5.12],
         domain_latex=
             r"xi ∈ [-5.12, 5.12], for all i = 1, …, d",
@@ -934,19 +1319,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/rastriginfcn.markdown",
         ],
         method=benchmarknd.Functions()._rastrigin__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0 at $\textbf{x}^{\ast} = (0, 0)$.",
         name="Rastrigin",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.', 'Pohlheim, H. GEATbx Examples: Examples of Objective Functions (2005). Retrieved June 2013, from http://www.geatbx.com/download/GEATbx_ObjFunExpl_v37.pdf.'],
-            ['http://www.sfu.ca/~ssurjano/rastr.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "Pohlheim, H. GEATbx Examples: Examples of Objective Functions (2005). Retrieved June 2013, from http://www.geatbx.com/download/GEATbx_ObjFunExpl_v37.pdf.",
+            "http://www.sfu.ca/~ssurjano/rastr.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Ridge
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-5, 5],
         domain_latex=r"$x_i \in [-5, 5]$ for $i=1, 2$",
         latex=r"$$f(\textbf{x}) = x_1 + d\left(\sum_{i=2}^{n}x_i^2\right)^\alpha$$",
@@ -957,13 +1353,23 @@ data = [
         minima=None,
         minima_latex=r"The global minimum of the function depends on the hypercube it is defined on. On the hypercube $$[-\gamma, \gamma]^n$$, $f(\textbf{x}^{\ast})= -\gamma$ located at $\mathbf{x^\ast}=(-\gamma, 0, ..., 0)$.",
         name="Ridge",
-        references=
-            ['eyer HG., Finck S. (2012) HappyCat – A Simple Function Class Where Well-Known Direct Search Algorithms Do Fail. In: Coello C.A.C., Cutello V., Deb K., Forrest S., Nicosia G., Pavone M. (eds) Parallel Problem Solving from Nature - PPSN XII. PPSN 2012. Lecture Notes in Computer Science, vol 7491. Springer, Berlin, Heidelberg, [https://doi.org/10.1007/978-3-642-32937-1_37', 'yman, A.I.: Convergence Behavior of Evolution Strategies on Ridge Functions. Ph.D. Thesis, University of Dortmund, Department of Computer Science (1999'],
-        tags=TODO,
+        references=[
+            "Beyer HG., Finck S. (2012) HappyCat – A Simple Function Class Where Well-Known Direct Search Algorithms Do Fail. In: Coello C.A.C., Cutello V., Deb K., Forrest S., Nicosia G., Pavone M. (eds) Parallel Problem Solving from Nature - PPSN XII. PPSN 2012. Lecture Notes in Computer Science, vol 7491. Springer, Berlin, Heidelberg, [https://doi.org/10.1007/978-3-642-32937-1_37",
+            "Oyman, A.I.: Convergence Behavior of Evolution Strategies on Ridge Functions. Ph.D. Thesis, University of Dortmund, Department of Computer Science (1999",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Rosenbrock
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-5, 10],
         domain_latex=
             r"xi ∈ [-5, 10], for all i = 1, …, d, although it may be restricted to the hypercube xi ∈ [-2.048, 2.048], for all i = 1, …, d",
@@ -978,19 +1384,33 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/rosenbrockfcn.markdown",
         ],
         method=benchmarknd.Functions()._rosenbrock__,
-        minima=dict("f(x_i)"=0, "x_i"=1),
+        minima=dict(r"f(x_i)"=0, r"x_i"=1),
         minima_latex=
             r"f(x_i) = 0 for x_i = 1 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (1, ..., 1)$.",
         name="Rosenbrock",
-        references=
-            ['Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. Towards global optimization, 2, 1-15.', 'Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.', 'Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.', 'Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.'],
-            ['http://www.sfu.ca/~ssurjano/rosen.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. Towards global optimization, 2, 1-15.",
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.",
+            "Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.",
+            "http://www.sfu.ca/~ssurjano/rosen.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Salomon
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-100, 100],
         domain_latex=
             r"x_i \in [-100, 100], i=1,...,n",
@@ -1003,18 +1423,29 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/salomonfcn.markdown",
         ],
         method=benchmarknd.Functions()._salomon__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name="Salomon",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', 'http://profesores.elo.utfsm.cl/~tarredondo/info/soft-comp/functions/node12.html', '. Salomon, “Re-evaluating Genetic Algorithm Performance Under Corodinate Rotation of Benchmark Functions: A Survey of Some Theoretical and Practical Aspects of Genetic Algorithms,” BioSystems, vol. 39, no. 3, pp. 263-278, 1996'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "http://profesores.elo.utfsm.cl/~tarredondo/info/soft-comp/functions/node12.html",
+            "R. Salomon, “Re-evaluating Genetic Algorithm Performance Under Corodinate Rotation of Benchmark Functions: A Survey of Some Theoretical and Practical Aspects of Genetic Algorithms,” BioSystems, vol. 39, no. 3, pp. 263-278, 1996",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schaffer N1
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-100, 100],
         domain_latex=
             r"x_i \in [-100, 100], i=1,2",
@@ -1027,16 +1458,26 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schaffern1fcn.markdown",
         ],
         method=benchmark2d.Functions()._schaffer_n1__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,2",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, 0)$.",
         name=
             "Schaffer 1",
             "Schaffer N. 1",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "S. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schaffer N2
     dict(
@@ -1055,7 +1496,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schaffern2fcn.markdown",
         ],
         method=benchmark2d.Functions()._schaffer_n2__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,2",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0.0$ at $\textbf{x}^{\ast} = (0, 0)$.",
@@ -1063,14 +1504,26 @@ data = [
             "Schaffer 2",
             "Schaffer Function N. 2",
             "Schaffer N. 2",
-        references=
-            ['Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.'],
-            ['http://www.sfu.ca/~ssurjano/schaffer2.html', 'https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online'],
-        tags=TODO,
+        references=[
+            "Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.",
+            "http://www.sfu.ca/~ssurjano/schaffer2.html",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "S. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schaffer N3
     dict(
-        dimensions="TODO",
+        dimensions=2,
         domain=[-100, 100],
         domain_latex=
             r"x_i \in [-100, 100], i=1,2",
@@ -1083,16 +1536,26 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schaffern3fcn.markdown",
         ],
         method=benchmark2d.Functions()._schaffer_n3__,
-        minima=dict("f(x_i)"=0.00156685, "\mathbf{x}"=[0, 1.253115]),
+        minima=dict(r"f(x_i)"=0.00156685, r"\mathbf{x}"=[0, 1.253115]),
         minima_latex=
             r"f(x_i) = 0.00156685 for \mathbf{x} = [0, 1.253115]",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0.00156685$ at $\textbf{x}^{\ast} = (0, 1.253115)$.",
         name=
             "Schaffer 3",
             "Schaffer N. 3",
-        references=
-            ['. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008'],
-        tags=TODO,
+        references=[
+            "S. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schaffer N4
     dict(
@@ -1111,7 +1574,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schaffern4fcn.markdown",
         ],
         method=benchmark2d.Functions()._schaffer_n4__,
-        minima=dict("f(x_i)"=0.292579, "\mathbf{x}"=[0, 1.253115]),
+        minima=dict(r"f(x_i)"=0.292579, r"\mathbf{x}"=[0, 1.253115]),
         minima_latex=
             r"f(x_i) = 0.292579 for \mathbf{x} = [0, 1.253115]",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0.292579$ at $\textbf{x}^{\ast} = (0, 1.253115)$.",
@@ -1119,10 +1582,22 @@ data = [
             "Schaffer 4",
             "Schaffer Function N. 4",
             "Schaffer N. 4",
-        references=
-            ['Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.'],
-            ['https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'rpackages.ianhowson.com/cran/smoof/man/makeSchafferN4Function.html', 'omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online'],
-        tags=TODO,
+        references=[
+            "Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "rpackages.ianhowson.com/cran/smoof/man/makeSchafferN4Function.html",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "S. K. Mishra, “Some New Test Functions For Global Optimization And Performance of Repulsive Particle Swarm Method,” [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schwefel
     dict(
@@ -1143,21 +1618,33 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schwefelfcn.markdown",
         ],
         method=benchmarknd.Functions()._schwefel__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"$f(\textbf{x}^{\ast}) = 0$ at $\textbf{x}^{\ast} = (420.9687, ..., 420.9687)$",
         name=
             "Schwefel",
             "Schwefel 1",
-        references=
-            ['GEATbx: Examples of Objective Functions. Retrieved September 2014, from http://www.pg.gda.pl/~mkwies/dyd/geadocu/fcnfun7.html.', 'Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.', 'Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.', 'Laguna, M., & Marti, R. Experimental Testing of Advanced Scatter Search Designs for Global Optimization of Multimodal Functions (2002). Retrieved June 2013, from http://www.uv.es/rmarti/paper/docs/global1.pdf.'],
-            ['ttp://www.sfu.ca/~ssurjan'],
-        tags=TODO,
+        references=[
+            "GEATbx: Examples of Objective Functions. Retrieved September 2014, from http://www.pg.gda.pl/~mkwies/dyd/geadocu/fcnfun7.html.",
+            "Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.",
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "Laguna, M., & Marti, R. Experimental Testing of Advanced Scatter Search Designs for Global Optimization of Multimodal Functions (2002). Retrieved June 2013, from http://www.uv.es/rmarti/paper/docs/global1.pdf.",
+            "http://www.sfu.ca/~ssurjan",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schwefel 2 20
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-100, 100],
         domain_latex=
             r"x_i \in [-100, 100], i=1,...,n",
@@ -1170,20 +1657,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schwefel220fcn.markdown",
         ],
         method=benchmarknd.Functions()._schwefel_2_20__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name=
             "Schwefel 2.20",
             "Schwefel 20",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "H. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schwefel 2 21
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-100, 100],
         domain_latex=
             r"x_i \in [-100, 100], i=1,...,n",
@@ -1196,20 +1693,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/schwefel221fcn.markdown",
         ],
         method=benchmarknd.Functions()._schwefel_2_21__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name=
             "Schwefel 2.21",
             "Schwefel 21",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "H. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schwefel 2 22
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-100, 100],
         domain_latex=r"$x_i \in [-100, 100]$ for $i=1, ..., n$",
         latex=r"$$f(\mathbf{x})=f(x_1, ..., x_n)=\sum_{i=1}^{n}|x_i|+\prod_{i=1}^{n}|x_i| $$",
@@ -1220,13 +1727,25 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name="Schwefel 2.22",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981', 'http://www.cs.unm.edu/~neal.holts/dga/benchmarkFunction/schwefel222.html', 'http://www.al-roomi.org/benchmarks/unconstrained/n-dimensions/190-schwefel-s-function-2-22'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "H. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981",
+            "http://www.cs.unm.edu/~neal.holts/dga/benchmarkFunction/schwefel222.html",
+            "http://www.al-roomi.org/benchmarks/unconstrained/n-dimensions/190-schwefel-s-function-2-22",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Schwefel 2 23
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-10, 10],
         domain_latex=r"$x_i \in [-10, 10]$ for $i=1, ..., n$",
         latex=r"$$f(\mathbf{x})=f(x_1, ..., x_n)=\sum_{i=1}^{n}x_i^{10}$$",
@@ -1237,13 +1756,25 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, ..., 0)$.",
         name="Schwefel 2.23",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "H. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Shubert
     dict(
-        dimensions=2,
+        dimensions=
+            2,
+            n,
         domain=[-10, 10],
         domain_latex=
             r"xi ∈ [-10, 10], for all i = 1, 2, although this may be restricted to the square xi ∈ [-5.12, 5.12], for all i = 1, 2",
@@ -1257,14 +1788,24 @@ data = [
         minima=None,
         minima_latex=r"The function has 18 global minima $f(\textbf{x}^{\ast})\approx-186.7309$.",
         name="Shubert",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Adorio, U. P. Dilman, “MVF - Multivariate Test Function Library in C for Unconstrained Global Optimization Methods,” [Available Online'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "E. P. Adorio, U. P. Dilman, “MVF - Multivariate Test Function Library in C for Unconstrained Global Optimization Methods,” [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Shubert 3
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-10, 10],
         domain_latex=
             r"x_i \in [-10, 10], i=1,...,n",
@@ -1277,14 +1818,24 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/shubert3fcn.markdown",
         ],
         method=benchmarknd.Functions()._shubert_3__,
-        minima=dict("f(x_i)"=-24.062499, "\mathbf{x}"=[5.791794, 5.791794]),
+        minima=dict(r"f(x_i)"=-24.062499, r"\mathbf{x}"=[5.791794, 5.791794]),
         minima_latex=
             r"f(x_i) = -24.062499 for \mathbf{x} = [5.791794, 5.791794] (and many others).",
             r"The function has one global minimum $f(\textbf{x}^{\ast})\approx-29.6733337$.",
         name="Shubert 3",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Adorio, U. P. Dilman, “MVF - Multivariate Test Function Library in C for Unconstrained Global Optimization Methods,” [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "E. P. Adorio, U. P. Dilman, “MVF - Multivariate Test Function Library in C for Unconstrained Global Optimization Methods,” [Available Online",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Shubert 4
     dict(
@@ -1296,14 +1847,16 @@ data = [
             "http://infinity77.net/global_optimization/test_functions_nd_S.html#go_benchmark.Shubert04",
         ],
         method=benchmarknd.Functions()._shubert_4__,
-        minima=dict("f(x_i)"=-29.016015, "\mathbf{x}"=[-0.80032121, -7.08350592]),
+        minima=dict(r"f(x_i)"=-29.016015, r"\mathbf{x}"=[-0.80032121, -7.08350592]),
         minima_latex=r"f(x_i) = -29.016015 for \mathbf{x} = [-0.80032121, -7.08350592] (and many others).",
         name="Shubert 4",
-        tags=TODO,
+        references=None,
+        # tags
+TODO
     ),
     # Sphere
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=
             [-1, 1],
             [-5.12, 5.12],
@@ -1320,19 +1873,31 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/spherefcn.markdown",
         ],
         method=benchmarknd.Functions()._sphere__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"$f(\textbf{x}^{\ast}) = 0$ at $\textbf{x}^{\ast} = (0, ..., 0)$",
         name="Sphere",
-        references=
-            ['Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. Towards global optimization, 2, 1-15.', 'Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.', 'Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.'],
-            ['ttp://www.sfu.ca/~ssurjano/spheref.htm', 'ttps://en.wikipedia.org/wiki/Test_functions_for_optimizatio'],
-        tags=TODO,
+        references=[
+            "Dixon, L. C. W., & Szego, G. P. (1978). The global optimization problem: an introduction. Towards global optimization, 2, 1-15.",
+            "Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.",
+            "Picheny, V., Wagner, T., & Ginsbourger, D. (2012). A benchmark of kriging-based infill criteria for noisy optimization.",
+            "http://www.sfu.ca/~ssurjano/spheref.htm",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimizatio",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Styblinski
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-5, 5],
         domain_latex=
             r"xi ∈ [-5, 5], for all i = 1, …, d",
@@ -1347,7 +1912,7 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/styblinskitankfcn.markdown",
         ],
         method=benchmarknd.Functions()._styblinski__,
-        minima=dict("f(x_i)"=r"-39.16616570377142n", "x_i"=-2.903534018185960),
+        minima=dict(r"f(x_i)"=r"-39.16616570377142n", r"x_i"=-2.903534018185960),
         minima_latex=
             r"f(x_i) = -39.16616570377142n for x_i = -2.903534018185960 for i=1,...,n",
             r"The function has one global minimum at: $f(x^*)=-39.16599\textbf{n}$ at $\textbf{x}^{\ast} = (-2.903534, ..., -2.903534)$.",
@@ -1355,14 +1920,23 @@ data = [
             "Styblinski-Tang",
             "Styblinski-Tank",
             "StyblinskiTang",
-        references=
-            ['Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.'],
-            ['http://www.sfu.ca/~ssurjano/stybtang.html'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Functions Index. Retrieved June 2013, from http://infinity77.net/global_optimization/test_functions.html#test-functions-index.",
+            "http://www.sfu.ca/~ssurjano/stybtang.html",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Sum Squres
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-10, 10],
         domain_latex=
             r"xi ∈ [-10, 10], for all i = 1, …, d, although this may be restricted to the hypercube xi ∈ [-5.12, 5.12], for all i = 1, …, d",
@@ -1376,10 +1950,22 @@ data = [
         minima=None,
         minima_latex=r"The function has one global minimum $f(\mathbf{x}^{\ast})=0$ at $\mathbf{x}^{\ast}=0$.",
         name="Sum Squares",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.', 'Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.'],
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', 'http://www.sfu.ca/~ssurjano/sumsqu.html', '.-R. Hedar, “Global Optimization Test Problems,” [Available Online'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "Molga, M., & Smutnicki, C. Test functions for optimization needs (2005). Retrieved June 2013, from http://www.zsd.ict.pwr.wroc.pl/files/docs/functions.pdf.",
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "http://www.sfu.ca/~ssurjano/sumsqu.html",
+            "A.-R. Hedar, “Global Optimization Test Problems,” [Available Online",
+        ],
+        # tags
+        separable=True,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Three Hump Camel
     dict(
@@ -1398,21 +1984,31 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/threehumpcamelfcn.markdown",
         ],
         method=benchmark2d.Functions()._three_hump_camel__,
-        minima=dict("f(x_i)"=0, "\mathbf{x}"=[0, 0]),
+        minima=dict(r"f(x_i)"=0, r"\mathbf{x}"=[0, 0]),
         minima_latex=
             r"f(x_i) = 0 for \mathbf{x} = [0, 0]",
             r"The function has one global minimum $f(\textbf{x}^{\ast})=0$ at $\textbf{x}^{\ast} = (0, 0)$.",
         name=
             "Three Hump Camel",
             "Three-Hump Camel",
-        references=
-            ['Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.'],
-            ['https://en.wikipedia.org/wiki/Test_functions_for_optimization', 'http://www.sfu.ca/~ssurjano/camel3.html'],
-        tags=TODO,
+        references=[
+            "Test functions for optimization. In Wikipedia. Retrieved June 2013, from https://en.wikipedia.org/wiki/Test_functions_for_optimization.",
+            "https://en.wikipedia.org/wiki/Test_functions_for_optimization",
+            "http://www.sfu.ca/~ssurjano/camel3.html",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Wolfe
     dict(
-        dimensions="TODO",
+        dimensions=3,
         domain=[0, 2],
         domain_latex=
             r"x_i \in [0, 2], i=1,2,3",
@@ -1425,18 +2021,28 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/wolfefcn.markdown",
         ],
         method=benchmark3d.Functions()._wolfe__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,2,3",
             r"The global minima $f(\textbf{x}^{\ast})=0$ are located at $\mathbf{x^\ast}=(0, 0, 0)$.",
         name="Wolfe",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "H. P. Schwefel, “Numerical Optimization for Computer Models,” John Wiley Sons, 1981",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=True,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Xin She Yang
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-5, 5],
         domain_latex=
             r"x_i \in [-5, 5], i=1,...,n",
@@ -1449,20 +2055,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/xinsheyangn1fcn.markdown",
         ],
         method=benchmarknd.Functions()._xin_she_yang__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The global minima $f(\textbf{x}^{\ast})=0$ are located at $\mathbf{x^\ast}=(0, ..., 0)$.",
         name=
             "Xin-She Yang",
             "Xin-She Yang 1",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "X. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online",
+        ],
+        # tags
+        separable=True,
+        continuous=False,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=True,
+        parametric=False,
     ),
     # Xin She Yang N2
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=
             [-2np.pi, 2np.pi],
             [-2*np.pi, 2*np.pi],
@@ -1477,20 +2093,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/xinsheyangn2fcn.markdown",
         ],
         method=benchmarknd.Functions()._xin_she_yang_n2__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"The global minimum $f(\textbf{x}^{\ast})=0$ are located at $\mathbf{x^\ast}=(0, ..., 0)$.",
         name=
             "Xin-She Yang 2",
             "Xin-She Yang N. 2",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "X. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Xin She Yang N3
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=
             [-20, 20],
             [-2*np.pi, 2*np.pi],
@@ -1505,20 +2131,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/xinsheyangn3fcn.markdown",
         ],
         method=benchmarknd.Functions()._xin_she_yang_n3__,
-        minima=dict("f(x_i)"=-1, "x_i"=0),
+        minima=dict(r"f(x_i)"=-1, r"x_i"=0),
         minima_latex=
             r"f(x_i) = -1 for x_i = 0 for i=1,...,n",
             r"The global minimum $f(\textbf{x}^{\ast})=-1$ are located at $\mathbf{x^\ast}=(0, ..., 0)$ for $m=5$ and $\beta = 15$.",
         name=
             "Xin-She Yang 3",
             "Xin-She Yang N. 3",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "X. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=True,
+        multimodal=False,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=True,
     ),
     # Xin She Yang N4
     dict(
-        dimensions="TODO",
+        dimensions="*",
         domain=[-10, 10],
         domain_latex=
             r"x_i \in [-10, 10], i=1,...,n",
@@ -1531,20 +2167,30 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/xinsheyangn4fcn.markdown",
         ],
         method=benchmarknd.Functions()._xin_she_yang_n4__,
-        minima=dict("f(x_i)"=-1, "x_i"=0),
+        minima=dict(r"f(x_i)"=-1, r"x_i"=0),
         minima_latex=
             r"f(x_i) = -1 for x_i = 0 for i=1,...,n",
             r"The global minimum $f(\textbf{x}^{\ast})=-1$ are located at $\mathbf{x^\ast}=(0, ..., 0)$.",
         name=
             "Xin-She Yang 4",
             "Xin-She Yang N. 4",
-        references=
-            ['omin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008', '. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online'],
-        tags=TODO,
+        references=[
+            "Momin Jamil and Xin-She Yang, A literature survey of benchmark functions for global optimization problems, Int. Journal of Mathematical Modelling and Numerical Optimisation}, Vol. 4, No. 2, pp. 150--194 (2013), [arXiv:1308.4008",
+            "X. S. Yang, “Test Problems in Optimization,” Engineering Optimization: An Introduction with Metaheuristic Applications John Wliey & Sons, 2010. [Available Online",
+        ],
+        # tags
+        separable=False,
+        continuous=False,
+        differentiable=False,
+        multimodal=True,
+        convex=False,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
     # Zakharov
     dict(
-        dimensions="d",
+        dimensions="*",
         domain=[-5, 10],
         domain_latex=
             r"xi ∈ [-5, 10], for all i = 1, …, d",
@@ -1559,16 +2205,25 @@ data = [
             "https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns/zakharov.markdown",
         ],
         method=benchmarknd.Functions()._zakharov__,
-        minima=dict("f(x_i)"=0, "x_i"=0),
+        minima=dict(r"f(x_i)"=0, r"x_i"=0),
         minima_latex=
             r"f(x_i) = 0 for x_i = 0 for i=1,...,n",
             r"$f(\textbf{x}^{\ast}) = 0$ at $\textbf{x}^{\ast} = (0, ..., 0)$",
         name=
             "Zacharov",
             "Zakharov",
-        references=
-            ['Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.'],
-            ['ttp://www.sfu.ca/~ssurjano/zakharov.htm'],
-        tags=TODO,
+        references=[
+            "Global Optimization Test Problems. Retrieved June 2013, from\nhttp://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO.htm.",
+            "http://www.sfu.ca/~ssurjano/zakharov.htm",
+        ],
+        # tags
+        separable=False,
+        continuous=True,
+        differentiable=False,
+        multimodal=False,
+        convex=True,
+        scalable=False,
+        random=False,
+        parametric=False,
     ),
 ]
