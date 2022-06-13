@@ -1,4 +1,4 @@
-name,call, sfu , infinity77 , benchmarkfcns 
+name,call,sfu,infinity77,benchmarkfcns
 Ackley,benchmarknd.Functions()._ackley__,Ackley,Ackley,Ackley
 Ackley N2,benchmark2d.Functions()._ackley_n2__,,,Ackley N. 2
 Ackley N3,benchmark2d.Functions()._ackley_n3__,,,Ackley N. 3

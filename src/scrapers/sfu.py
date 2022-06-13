@@ -13,12 +13,13 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 import glob
 import pandas as pd
-from collectors import utils
+from scrapers import utils
 
+import os
 
 BASE_URL = 'https://www.sfu.ca/~ssurjano'
 HOMEPAGE_URL = f'{BASE_URL}/optimization.html'
-ASSETS = '../assets/sfu'
+ASSETS = '../assets/sources/sfu'
 HOMEPAGE_PATH = f'{ASSETS}/homepage.html'
 FUNCTION_PATH = f'{ASSETS}/functions'
 
@@ -82,6 +83,11 @@ def crawl_functions():
         ))
     df = pd.DataFrame(data)
     df.to_csv(f'{ASSETS}/df.csv', index=False)
+    return df
+
+
+def crawl():
+    return crawl_functions()
 
 '''
 def clean_domain(domain: str):

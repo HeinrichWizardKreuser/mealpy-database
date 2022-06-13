@@ -1,18 +1,9 @@
-from collectors import sfu, infinity77, benchmarkfcns
+'''
+web --[crawl]--> local HTML --[scrape]--> df.csv --[build-db]--> db.py
+'''
 
-
-''' sfu '''
-# sfu.download_homepage()
-# sfu.download_functions()
-sfu.crawl_functions()
-
-''' infinity77 '''
-# infinity77.download_homepage()
-# infinity77.download_pages()
-infinity77.crawl_pages()
-
-''' benchmarkfcns '''
-benchmarkfcns.crawl_markdown()
+from scrapers import collector
+from build_db import compiler
 
 """
 TODO: entries do not define whether they are scalable, fix this
@@ -27,3 +18,14 @@ Build a notebook that performs the following:
     an algorithm is more suited for landscapes of one tag or the other.
 
 """
+
+
+def main():
+    # scrapers_main.crawl()
+    # name2df = scrapers_main.scrape()
+    # build_db(name2df)
+
+    compiler.main()
+
+if __name__ == '__main__':
+    main()

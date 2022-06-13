@@ -16,12 +16,12 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 import glob
 import pandas as pd
-from collectors import utils
+from scrapers import utils
 
 
 BASE_URL = 'http://infinity77.net/global_optimization'
 HOMEPAGE_URL = f'{BASE_URL}/test_functions.html'
-ASSETS = '../assets/infinity77'
+ASSETS = '../assets/sources/infinity77'
 HOMEPAGE_PATH = f'{ASSETS}/homepage.html'
 PAGES_PATH = f'{ASSETS}/pages'
 
@@ -126,7 +126,10 @@ def crawl_pages():
             data.append(adict)
     df = pd.DataFrame(data)
     df.to_csv(f'{ASSETS}/df.csv', index=False)
+    return df
 
+def crawl():
+    return crawl_pages()
 
 def load_df():
     df = pd.read_csv(f'{ASSETS}/df.csv')

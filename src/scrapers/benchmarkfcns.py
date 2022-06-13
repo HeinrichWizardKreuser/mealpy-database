@@ -13,9 +13,9 @@
 
 import glob
 import pandas as pd
-from collectors import utils
+from scrapers import utils
 
-ASSETS = '../assets/benchmarkfcns'
+ASSETS = '../assets/sources/benchmarkfcns'
 PAGES_PATH = f'{ASSETS}/markdown'
 
 BASE_URL = 'https://github.com/mazhar-ansari-ardeh/BenchmarkFcns/blob/gh-pages/benchmarkfcns'
@@ -31,6 +31,11 @@ def crawl_markdown():
         rows.append(row)
     df = pd.DataFrame(rows)
     df.to_csv(f'{ASSETS}/df.csv', index=False)
+    return df
+
+
+def crawl():
+    return crawl_markdown()
 
 
 def extract(filepath, adict):
